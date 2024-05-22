@@ -8,6 +8,6 @@ using System.Globalization;
 var sqlParser = new SqlParserEngine();
 string sql = sqlParser.GetTestSql1();
 var query = sqlParser.Parse(sql);
-
+query = query;
 
 

@@ -71,7 +71,11 @@ namespace ConsoleApp1.SqlParser.Engine
                         }
                     case SqlPart.FROM:
                         {
-                            if (!isParenthesis)
+                            if (isComma)
+                            {
+                                index++;
+                            }
+                            else if (!isParenthesis)
                             {
                                 sqlQuery.SqlFrom.SqlFromElements.Add(
                                     new SqlFromElement()
