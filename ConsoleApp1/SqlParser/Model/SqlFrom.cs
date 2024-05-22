@@ -9,6 +9,5 @@ namespace ConsoleApp1.SqlParser.Model
     public class SqlFrom
     {
         public List<SqlFromElement> SqlFromElements { get; set; } = new List<SqlFromElement>();
-        public string RawSql { get; set; }
     }
 }

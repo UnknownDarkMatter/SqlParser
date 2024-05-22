@@ -214,6 +214,16 @@ namespace ConsoleApp1.SqlParser.Engine
 
         public string GetTestSql1()
         {
+
+            return @"
+select *
+from (select * from public.personne_src) as a
+inner join public.personne c on a.nom = coalesce(c.nom, '')
+, public.personne as b  
+where a.nom = b.nom
+
+";
+
             return @" select toto, age from 
                         (select titi as toto, age from 
                             (select matable.nom as titi, age from personne_src matable)

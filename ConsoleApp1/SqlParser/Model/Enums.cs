@@ -26,4 +26,12 @@ namespace ConsoleApp1.SqlParser.Model
         WHERE
     }
 
+    public enum SqlJoinType
+    {
+        COMMA,
+        INNER_JOIN,
+        LEFT_JOIN,
+        RIGHT_JOIN,
+    }
+
 }
