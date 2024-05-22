@@ -38,10 +38,12 @@ namespace ConsoleApp1.SqlParser.Engine
                 else if (sqlPart == SqlPart.FROM && word.ToLower() == "where")
                 {
                     sqlPart = SqlPart.WHERE;
-                    if (!TryGetNextWord(sql, ref index, out word, out isParenthesis, out isComma))
+                    string rawSql = sql.Substring(index);
+                    sqlQuery.SqlWhere = new SqlWhere()
                     {
-                        sqlPart = SqlPart.UNKNOWN;
-                    }
+                        RawSql = rawSql
+                    };
+                    index = sql.Length;
                 }
                 switch (sqlPart)
                 {
@@ -109,10 +111,6 @@ namespace ConsoleApp1.SqlParser.Engine
                                     return sqlQuery;
                                 }
                             }
-                            break;
-                        }
-                    case SqlPart.WHERE:
-                        {
                             break;
                         }
                     default:
