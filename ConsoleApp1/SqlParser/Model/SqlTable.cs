@@ -8,6 +8,6 @@ namespace ConsoleApp1.SqlParser.Model
 {
     public class SqlTable
     {
-        public string Name { get; set; }
+        public string DbName { get; set; }
     }
 }

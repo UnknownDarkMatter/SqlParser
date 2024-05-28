@@ -17,7 +17,6 @@ namespace ConsoleApp1.SqlParser.Model
         public SqlJoinType SqlJoinType { get; set; }
 
         public string JoinOnRawSql { get; set; }
-
         public string Alias { get; set; }
 
     }

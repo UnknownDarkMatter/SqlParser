@@ -28,6 +28,7 @@ namespace ConsoleApp1.SqlParser.Model
 
     public enum SqlJoinType
     {
+        NONE,
         COMMA,
         INNER_JOIN,
         LEFT_JOIN,
